@@ -85,7 +85,7 @@ h2 {
         a:hover {
             color: $back1;
             text-decoration: none;
-            background-color:rgb(201, 73, 80);
+
         }
         .add-house {
             background-color: $mainColor;
@@ -420,6 +420,336 @@ h2 {
 
     a{
         color:inherit;
+    }
+}
+
+
+            // Single Property Page
+.wrapper {
+    background: $back3;
+}
+.property-logo {
+    padding-bottom: 10px;
+}
+.property-wrapper {
+    margin-top: 80px;
+    .property-content {
+        
+        .property-image {
+            position: relative;
+    
+            img {
+                width:100%;
+            }
+            .property-overlay {
+                position: absolute;
+                right: 0;
+                bottom:0;
+                background-color: $mainColor;
+                border-top-left-radius: 10px;
+                padding: 10px;
+                color:#fff;
+                font-size: 25px;
+                font-family: $mainFont;
+            }
+        }
+        .property-details {
+            font-size: 18px;
+            letter-spacing: 2px;
+
+            p{
+                padding-left: 30px;
+            }
+        }
+        .property-body {
+            margin-top: 50px;
+            padding-bottom: 50px;
+            background: #fff;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+
+            h3 {
+                color: $mainColor;
+                font-weight: 700;
+                padding-bottom: 15px;
+                font-size: 28px;
+            }
+
+            .property-features {
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid $back3;
+
+                .features {
+                    margin-left: 15px;
+                    display: inline-block;
+
+                    i{
+                        color:$mainColor;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .property-description {
+                padding: 0 30px 20px;
+                border-bottom:2px solid $back3;
+                p {
+                    letter-spacing: 1.2px;
+                    color: $back1;
+                    line-height: 2;
+                }
+            }
+
+            .property-amenities {
+                margin-top: 30px;
+                padding: 0 30px;
+                border-bottom: 1px solid $back2;
+                padding-bottom: 20px;
+                
+                .row {
+                    text-align: center;
+                    ul {
+                        list-style: none;
+
+                        li {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+            .google-wrapper {
+                padding: 0 30px;
+            }
+        } 
+    }
+    .total-wrapper {
+        background-color: #fff;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+        padding: 20px;
+        
+        .book-box {
+            h3 {
+                border-bottom: 1px solid $back2;
+                padding-bottom: 8px;
+            }
+
+            .total-checkIn {
+                input.form-control {
+                    font-size: 13px;
+                    margin-bottom: 15px;
+                    height: 40px;
+                    padding-left: 35px;
+                    background-repeat: no-repeat;
+                    background-position: 10px 50%;
+    
+                    &.calendar-icon {
+                        background-image: url('../images/calendar-icon.png');
+                        background-size: 15px 17px;
+                    }
+                }
+            }
+            .total-days {
+                text-align: center;
+
+                p {
+                    font-size: 18px;
+                    font-weight: 700
+                }
+                span {
+                    color: $mainColor;
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+            }
+            .total-price {
+                text-align: center;
+
+                h3 {
+                    text-align: left;
+                }
+                span {
+                    font-size: 25px;
+                    font-weight: 800;
+                    text-align: right;
+                }
+            }
+            .total-submit {
+                text-align: center;
+
+                button{
+                    background-color: $mainColor;
+                    color: #fff;
+                    font-size: 20px;
+                    padding: 8px 12px;
+                    border-radius: 8px;
+                    transition: all 0.3s;
+                    width: 100%;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $back1;
+                        background-color:rgb(201, 73, 80);
+                    }
+                }
+            }
+        }       
+    }
+}
+
+    // Property Form Page
+
+.form-wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.27);
+    margin-top: 50px;
+    padding-bottom: 30px;
+
+    h1 { 
+        text-align: center;
+        padding: 30px 0;
+        color: $mainColor;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        font-family: "Montserrat"
+    }
+    legend {
+        font-size: 24px;
+        padding: 20px 0 10px 0;;
+    }
+    .form-group {
+        width: 50%;
+    }
+    fieldset {
+        
+        .form-amenities {
+
+            label {
+                width: 100%;
+                padding-top: 8px;
+            }
+        }
+
+        .form-agreements {
+            padding: 30px 0;
+        }
+    }
+    .form-button {
+
+        input{
+        background-color: $mainColor;
+        color: #fff;
+        font-size: 20px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $back1;
+            background-color:rgb(201, 73, 80);
+            }
+        }
+    }
+    .form-image {
+        .submit-image {
+            input {
+                padding-top: 20px;
+                
+
+            }
+        }
+    }
+}
+
+    // Contact Us Page
+
+.contact-wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.27);
+    margin-top: 50px;
+    padding-bottom: 30px;
+    width: 50%;
+
+
+    h1 {
+        text-align: center;
+        padding: 30px 0;
+        color: $mainColor;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        font-family: "Montserrat"
+    }
+    .form-group {
+        margin: 0 auto;
+        width: 60%;
+        padding-top: 20px;
+    }
+    .form-button {
+        text-align: center;
+        padding-top: 20px;
+
+        input{
+        background-color: $mainColor;
+        color: #fff;
+        font-size: 20px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $back1;
+            background-color:rgb(201, 73, 80);
+            }
+        }
+    }
+}
+
+    // All Properties Page
+.filter {
+text-align: right;
+
+    button {
+        border-radius: 5px;
+        border: 1px solid $back2;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.18);
+        margin-left: 10px;
+
+        &:focus {
+            outline-color: $mainColor;
+        }
+    }
+}
+
+.properties {
+background-color: #fff;
+box-shadow: 0 2px 10px 0 rgba(0,0,0,0.27);
+margin-top: 50px;
+padding-bottom: 30px;
+
+h2 {
+    margin-top: 30px;
+}
+
+.row {
+    margin-top: 20px;
+}
+}
+    // Blog Page
+
+.blog-wrapper {
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.27);
+    margin-top: 50px;
+    padding-bottom: 30px;
+
+    .news-item {
+
+        img {
+            width: 100%;
+
+        }
     }
 }
   

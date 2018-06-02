@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CF Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" width="16px">
+</head>
+<body>
+
+    <div class="wrapper ">
+        <div class="hero">
+            <div class="top-nav">
+                <div class="row">
+                    <i class="fas top fa-phone col-sm-3 col-sm-offset-2"> +1 800-850-0000</i>
+                    <i class="fas top fa-map-marker col-sm-2"> Orlando, FL</i>
+                    <i class="fas top fa-envelope col-sm-2"> contact@cfrealestate.com</i>
+                    <div class="social-icon">
+                        <i class="fab top fa-github"></i>
+                        <i class="fab top fa-facebook-square"></i>
+                        <i class="fab top fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo property-logo col-sm-3">
+                            <a href="#"><img src="assets/images/logo.png"></a>
+                        </div>
+                        <div class="nav-content col-sm-9 ">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="properties.html">Properties</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Submit Property Page -->
+
+        <div class="form-wrapper container">
+            <h1> New Property </h1>
+            
+            <div class="form col-sm-8">
+                <form role="form">
+                    <fieldset>
+
+                        <!-- Property Information -->
+
+                        <legend> Property Details </legend>
+                        <div class="form-details">
+                            <div class="form-group">
+                                <label  for="textinput">Address</label>
+                                <div class="form-input">
+                                    <input type="text" placeholder="1255 Main St" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">City</label>
+                                <div class="form-input"> 
+                                    <input type="text" placeholder="Orlando" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">State</label>
+                                <div class="form-input"> 
+                                    <input type="text" placeholder="Florida" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">Postcode</label>
+                                <div class="form-input"> 
+                                    <input type="number" placeholder="32819" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">Country</label>
+                                <div class="form-input"> 
+                                    <input type="text" placeholder="United States" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Features -->
+
+                        <legend> Property Features </legend>
+                        <div class="form-features">
+                            <div class="form-group">
+                                <label  for="textinput">Number of Bedrooms</label>
+                                <div class="form-input"> 
+                                    <input type="number" placeholder="5" class="form-control icon bed-icon" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">Number of Bathrooms</label>
+                                <div class="form-input"> 
+                                    <input type="number" placeholder="3" class="form-control icon bath-icon" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">Number of Guests</label>
+                                <div class="form-input"> 
+                                    <input type="number" placeholder="8" class="form-control icon user-icon" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  for="textinput">Garage</label>
+                                <div class="form-input"> 
+                                    <input type="number" placeholder="2" class="form-control icon car-icon" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Amenities -->
+
+                        <legend> Property Amenities </legend>
+                        <div class="form-amenities">        
+                            <div class="form-group">
+                                <div class="checkbox checkbox-switch ">
+                                    <label>
+                                        <input type="checkbox" name="" checked="" />
+                                        <span>Kitchen</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" checked="" />
+                                        <span>Hair Dryer</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" checked="" />
+                                        <span>Pool</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="" checked="" />
+                                        <span>Grill</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Description -->
+
+                        <legend> Description </legend>
+                        <div class="form-description">
+                            <textarea  rows="8" cols="60%" name="description" form=""></textarea>
+                        </div>
+
+                        <!-- Property Price -->
+                        <legend> Price  </legend>
+                        <div class="form-group">
+                            <label  for="textinput">Price per Day</label>
+                            <div class="form-input"> 
+                                <input type="number" placeholder="$150" class="form-control icon car-icon" required>
+                            </div>
+                        </div>
+
+                        <div class="form-agreements">
+                            <label>
+                                <input type="checkbox" name="" checked="" required />
+                                <span>Agree with <a>Terms of Conditions</a></span>
+                            </label>
+                        </div>
+
+                        <!-- Form Button -->
+                        <div class="form-button">
+                            <input type="submit">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-image">
+                    <legend> Photos </legend>
+                    <img src="assets/images/blog3.jpg" width="350">
+                    <div class="submit-image">
+                        <input type="file">
+                    </div>
+                </div>
+            </div>
+          
+        </div> <!--Wrapper End-->
+
+            
+
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="row">
+                <div class="logo-footer col-sm-4">
+                    <a href="#"><img src="assets/images/logoWhite.png"></a>
+                </div>
+                <div class="info-footer col-sm-4">
+                    <h5> Information</h5>
+                    <ul>
+                        <li><a href="#">About </a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="info-footer col-sm-4">
+                    <h5> Contact</h5>
+                    <ul>
+                        <li><i class="fas fa-phone">  +1 800-850-0000</i></li>
+                        <li><i class="fas fa-map-marker"> Orlando, FL</i></li>
+                        <li><i class="fas fa-envelope"> contact@cfrealestate.com</i></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <footer class="copyright">
+            <div class="text-center">
+                &copy; 2018 - CF Real Estate. All rights reserved | <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a>
+            </div>
+        </footer>
+
+     </div> <!--Wrapper End-->
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
