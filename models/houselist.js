@@ -11,9 +11,9 @@ module.exports = function(sequelize, DataTypes) {
         validate: {len: [1, 240]}
       },
       Postcode: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
-        validate: {len: [5,5]}
+        validate: {len: [5,5], isNumberic:true}
       },
       Bedrooms: {
         type: DataTypes.STRING,
@@ -27,24 +27,6 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Kitchen: {
-        type: DataTypes.BOOLEAN,
-
-        defaultValue: false
-      },
-      HairDryer: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-      },
-      Pool: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-      },
-      Grill: {
-        type: DataTypes.BOOLEAN,
-
-        defaultValue: false
-      },
       Description: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -53,13 +35,6 @@ module.exports = function(sequelize, DataTypes) {
       Price: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
-
-      Pets: {
-        type: DataTypes.BOOLEAN,
-        // defaultValue is a flag that defaults a new todos complete value to false if
-        // it isn't supplied one
-        defaultValue: false
       },
     });
     return Houses;
