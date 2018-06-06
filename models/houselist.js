@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       Postcode: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {len: [5,5], isNumberic:true}
+        validate: {len: [5,5]}
       },
       Bedrooms: {
         type: DataTypes.STRING,
@@ -29,8 +29,6 @@ module.exports = function(sequelize, DataTypes) {
       },
       Description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {len: [1, 700]}
       },
       Price: {
         type: DataTypes.STRING,
