@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" width="16px">
-    <script src="https://code.jquery.com/jquery.js"></script>
-
 </head>
 <body>
 
@@ -32,15 +31,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="logo property-logo col-sm-3">
-                            <a href="#"><img src="assets/images/logo.png"></a>
+                            <a href="/"><img src="assets/images/logo.png"></a>
                         </div>
                         <div class="nav-content col-sm-9 ">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="properties.html">Properties</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a class="add-house" href="form.html">Submit Property</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/properties">Properties</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a class="add-house" href="/form">Submit Property</a></li>
                             </ul>
                         </div>
                     </div>
@@ -53,39 +52,39 @@
                 <div class="col-sm-9">
                     <div class="property-content">
                         <div class="property-details">
-                            <h2> 1442 Main St</h2> 
-                            <p>Orlando Fl, 32819</p>
+                            <h2 id="singleAddress"> </h2> 
+                            <p><span id="singleCity"></span> ,<span id="singleZipcode"></span></p>
                         </div>
                         <div class="property-image" >
                             <img src="assets/images/header.jpg">
                             <div class="property-overlay">
-                                <p> $ 100 /Day 
+                                <p> $ <span id="singlePrice"> </span> /Day </p> 
                             </div>
                         </div>
                         <div class="property-body">
                             <div class="property-features">
                                 <div class="bedroom features">
                                     <p> Bedrooms </p>
-                                    <i class="fas fa-bed"><span> 5</span></i>
+                                    <i class="fas fa-bed"> <span id="singleBedroom"> </span></i>
                                 </div>
                                 <div class="bedroom features">
                                     <p> Bathroom </p>
-                                    <i class="fas fa-bath"><span> 3</span></i>
+                                    <i class="fas fa-bath"> <span id="singleBathroom"> </span></i>
                                 </div>
-                                <div class="bedroom features">
+                                <!-- <div class="bedroom features">
                                     <p> Garage </p>
                                     <i class="fas fa-car"><span> 2</span></i>
-                                </div>
+                                </div> -->
                                 <div class="bedroom features">
                                     <p> Guests </p>
-                                    <i class="fas fa-user"><span> 8</span></i>
+                                    <i class="fas fa-user"> <span id="singleGuest"> </span> </i>
                                 </div>
                             </div>
                             <div class="property-description">
                                 <h3> Description </h3>
-                                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, sit. Maiores blanditiis quasi suscipit eos, illo ipsa ab vitae voluptas, voluptatum porro nemo. Accusantium quos, inventore doloremque explicabo modi officia recusandae necessitatibus maxime error nisi at possimus, harum odit quae.</p>
+                                <p id="singleDescription"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, sit. Maiores blanditiis quasi suscipit eos, illo ipsa ab vitae voluptas, voluptatum porro nemo. Accusantium quos, inventore doloremque explicabo modi officia recusandae necessitatibus maxime error nisi at possimus, harum odit quae.</p>
                             </div>
-                            <div class="property-amenities">
+                            <!-- <div class="property-amenities">
                                 <h3> Property Amenities </h3>
                                 <div class="row">
                                     <ul class="col-sm-4">
@@ -104,6 +103,10 @@
                                         <li>Hair Dryer</li>
                                     </ul>
                                 </div>
+                            </div> -->
+                            <div class="property-ideal">
+                                <h3> Ideal for </h3>
+                                <p> Weddings, Private Parties, Performances, Small Meetings, Large events, Photo shoots, Classes/Workshops, Corporate Events, Filming Location</p>
                             </div>
                             <div class="google-wrapper">
                                 <h3> Property Location </h3>
@@ -117,7 +120,7 @@
                     <div class="total-wrapper">
                         <h2> Book </h2>
                             <div class="book-box">
-                                <h3> $100 /Day </h3>
+                                <h3> $<span id="singlePrice1"></span> /Day </h3>
                             <div class="total-checkIn">
                                 <input class="calendar-icon form-control" placeholder="Check-In">
                                 <input class="calendar-icon form-control" placeholder="Check-Out">
@@ -141,103 +144,25 @@
           <!-- Similar Properties -->
           <section class="properties container">
             <h2> Similar Properties </h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="home-item">
-                        <div class="home-image">
-                            <img src="assets/images/townhouse.jpg" alt="Home1" />
-                            <div class="overlay-info">
-                                <div class="home-status sale">
-                                        <p>Popular</p>
-                                </div>
-                                <div class="home-price">
-                                <span>$110 /Day</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-info">
-                            <ul>
-                                <li class="home-address">1800, Main Ridge Blvd</li>
-                                <li class="home-details">
-                                <i class="fas fa-bed"></i><span> 5 Bedrooms</span>
-                                <i class="fas fa-bath"></i><span> 3 Bathrooms</span>
-                                <i class="fas fa-users"></i><span> 8 Guests </span>
-                                </li>
-                                <li class="home-type"> Townhouse</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="home-item">
-                        <div class="home-image">
-                                <img src="assets/images/townhouse.jpg" alt="Home2" />
-                            <div class="overlay-info">
-                                <div class="home-status rent">
-                                    <p>New</p>
-                                </div>
-                                <div class="home-price ">
-                                    <span>$185 /Day</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-info">
-                            <ul>
-                                <li class="home-address">1800, Main Ridge Blvd</li>
-                                <li class="home-details">
-                                <i class="fas fa-bed"></i><span> 5 Bedrooms</span>
-                                <i class="fas fa-bath"></i><span> 3 Bathrooms</span>
-                                <i class="fas fa-users"></i><span> 8 Guests </span>
-                                </li>
-                                <li class="home-type">Single Family Home</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="home-item">
-                        <div class="home-image">
-                                <img src="assets/images/house.jpg" alt="Home3" />
-                            <div class="overlay-info">
-                                <div class="home-status sale">
-                                    <p>Popular</p>
-                                </div>
-                                <div class="home-price">
-                                    <span>$95 /Day</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-info">
-                            <ul>
-                                <li class="home-address">1800, Main Ridge Blvd</li>
-                                <li class="home-details">
-                                <i class="fas fa-bed"></i><span> 5 Bedrooms</span>
-                                <i class="fas fa-bath"></i><span> 3 Bathrooms</span>
-                                <i class="fas fa-users"></i><span> 8 Guests </span>
-                                </li>
-                                <li class="home-type">Apartment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="row propertiesRender1">
+                <!-- Similar Properties goes here -->
             </div>
         </section>
 
-            
 
 
         <!-- Footer -->
         <footer class="main-footer">
             <div class="row">
                 <div class="logo-footer col-sm-4">
-                    <a href="#"><img src="assets/images/logoWhite.png"></a>
+                    <a href="/"><img src="assets/images/logoWhite.png"></a>
                 </div>
                 <div class="info-footer col-sm-4">
                     <h5> Information</h5>
                     <ul>
-                        <li><a href="#">About </a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/about">About </a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="info-footer col-sm-4">
@@ -266,6 +191,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="assets/js/moment.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
