@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" width="16px">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 </head>
 <body>
 
@@ -34,10 +36,10 @@
                         </div>
                         <div class="nav-content col-sm-9 ">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="properties.html">Properties</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/properties">Properties</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -51,13 +53,13 @@
             <h1> New Property </h1>
             
             <div class="form col-sm-8">
-                <form role="form">
+                <form id="form">
                     <fieldset>
 
                         <!-- Property Information -->
 
                         <legend> Property Details </legend>
-                        <div class="form-details">
+                        <div id="form-details">
                             <div class="form-group">
                                 <label  for="textinput">Address</label>
                                 <div class="form-input">
@@ -108,16 +110,14 @@
                         <!-- Property Description -->
 
                         <legend> Description </legend>
-                        <div class="form-description">
-                            <textarea  rows="8" cols="60%" name="description" form="" id="Description"></textarea>
-                        </div>
+                            <textarea  rows="8" cols="60%" class="form-control" id="Description"></textarea>
 
                         <!-- Property Price -->
                         <legend> Price  </legend>
                         <div class="form-group">
                             <label  for="textinput">Price per Day</label>
                             <div class="form-input"> 
-                                <input type="number" placeholder="$150" class="form-control icon car-icon" required>
+                                <input type="number" placeholder="$150" class="form-control icon car-icon" id="Price" required>
                             </div>
                         </div>
 
@@ -190,6 +190,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/houselist.js"></script>
 </body>
 </html>
