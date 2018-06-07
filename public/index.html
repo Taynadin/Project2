@@ -20,7 +20,7 @@
                 <div class="row">
                     <i class="fas top fa-phone col-sm-3 col-sm-offset-2"> +1 800-850-0000</i>
                     <i class="fas top fa-map-marker col-sm-2"> Orlando, FL</i>
-                    <i class="fas top fa-envelope col-sm-2"> contact@cfrealestate.com</i>
+                    <i class="fas top fa-envelope col-sm-2"> cfevents2018@gmail.com </i>
                     <div class="social-icon">
                         <i class="fab top fa-github"></i>
                         <i class="fab top fa-facebook-square"></i>
@@ -51,14 +51,14 @@
                 <div class="row">
                     <div class="subtitle col-sm-7">
                         <h1> The best way to host your occasion in Central Florida</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo aliquid consequatur consequuntur ad? Repellat optio eum adipisci veritatis totam dicta!</p>
                     </div>
+
                     <div class="col-sm-5">
                         <div class="search-box">
                             <div class="search search-location">
                                 <h4> Location</h4>
                                 <div class='search-location'>
-                                    <input class="form-control map-pin-icon " placeholder="Where to go?" />
+                                    <input name="location" class="form-control map-pin-icon " placeholder="Where to go?" />
                                 </div>
                             </div>
                             <div class="search search-type">
@@ -74,10 +74,10 @@
                                 <input class="form-control people-icon" type="number" pattern="[0-9]*" placeholder="Ex. 5" id="guests" />
                             </div>
                             <div class="search-btn">
-                                <button>Search</button>
+                                <button type="button" id="search-form-btn">Search</button>
                             </div>
                         </div>
-                    </div>           
+                    </div>   
                 </div>
             </div>
          </div>
@@ -173,18 +173,19 @@
                 <div class="row ">
                     <div class="service-info col-sm-4">
                         <i class="fas service fa-search"></i>
-                        <h5> Easy to find </h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, distinctio.</p>
+                        <h5> Perfect Place</h5>
+                        <p>Don’t want to host an event at your own home or don’t have the space? Find the perfect home to host your event with us. 
+                        </p>
                     </div>
                     <div class="service-info col-sm-4">
                         <i class="fas service fa-users"></i>
-                        <h5> Comfort </h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, distinctio.</p>
+                        <h5> Convenience </h5>
+                        <p>Make your guests feel at home while throwing an event that they will remember. Let Central Florida Events help you. </p>
                     </div>
                     <div class="service-info col-sm-4">
                         <i class="fas service fa-home"></i>
                         <h5> Add Property </h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, distinctio.</p>
+                        <p>Do you have a property you would like to add? Fill out form to be added to our list of properties for special events. </p>
                     </div>
                 </div>
             </section>
@@ -198,17 +199,14 @@
                         <div class="add col-sm-4">
                             <i class="fas icon fa-user-plus"></i>
                             <h3> Register </h3>
-                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, saepe.</p>
                         </div>
                         <div class="add col-sm-4">
                             <i class="fas icon fa-clipboard-list"></i>
                             <h3> Fill Up Property Details </h3>
-                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, saepe.</p>
                         </div>
                         <div class="add col-sm-4">
                             <i class="fas icon fa-check-circle"></i>
                             <h3> You are Done </h3>
-                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, saepe.</p>
                         </div>
                     </div>
                     <div class="add-submit">
@@ -300,5 +298,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+        $('#search-form-btn').on('click', function() {
+            var location = $('input[name=location]').val().trim();
+
+            console.log('location', location);
+
+            $.ajax({
+                type: 'GET',
+                url: '/api/search',
+                params: { location: location },
+                success: function(response) {
+                    console.log(response);
+                    window.location.href = '/properties';
+                },
+            });
+        });
+    });
+    </script>
 </body>
 </html>
