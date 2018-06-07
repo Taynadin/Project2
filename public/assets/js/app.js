@@ -1,10 +1,9 @@
 jQuery(document).ready(function($){
 
-
-    $('.datepicker').datepicker({
-      autoclose: true,
-      todayBtn: 'linked'
-    });
+    // $('.datepicker').datepicker({
+    //   autoclose: true,
+    //   todayBtn: 'linked'
+    // });
    
     $('#guests').on('keyup change', function(e) {
       if( $(this).val() > 99 ) {
