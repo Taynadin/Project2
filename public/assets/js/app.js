@@ -265,18 +265,18 @@ jQuery(document).ready(function($){
 //       }
 
 
-//     //   Form Image 
-//     function readURL(input) {
-//     if (input.files && input.files[0]) {
-//         var reader = new FileReader();
+    //   Form Image 
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
 
-//         reader.onload = function (e) {
-//             $('.formImage').attr('src', e.target.result);
-//         }
+        reader.onload = function (e) {
+            $('#formImage').attr('src', e.target.result);
+        }
 
-//         reader.readAsDataURL(input.files[0]);
-//     }
-// }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 
 $("#imageInput").change(function(){
     readURL(this);
